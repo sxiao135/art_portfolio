@@ -6,4 +6,4 @@ def testing(request):
     return HttpResponse("Hello World!")
 
 def homepage(request):
-    return render(request, "portfolio/homepage.html")
+    return render(request, "portfolio/hpart.html")
