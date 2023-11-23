@@ -4,15 +4,15 @@
 {% extends "portfolio/homepage.html" %}
 
 {% block body %}
-    <h1>Works:</h1>
-    <ul>
+    <!-- <ul> -->
         {% for work in works %}
-            <li>
+            <div>
                 <h2>{{ work.title }}</h2>
-                    <iframe id ="{{ work.id }}" src="{{ work.img_path }}" frameborder="0" scrolling="yes" allowfullscreen title="{{ work.title }}"></iframe>
-                <p> {{ work.description }} </p>
+                    <!-- <iframe id ="{{ work.id }}" src="{{ work.img_path }}" frameborder="0" scrolling="yes" allowfullscreen title="{{ work.title }}"></iframe> -->
+                    <center><iframe src="{{ work.img_path }}" frameborder="0" scrolling="yes" allowfullscreen title="{{ work.title }}"></iframe></center>
+                    <p> {{ work.description }} </p>
                 <br>
-            </li>
+            </div>
 
             <script> 
                 //IMAGE SWITCH NOT WORKING
@@ -31,5 +31,5 @@
             </script>
         {% endfor %}
 
-    </ul>
+    <!-- </ul> -->
 {% endblock %}

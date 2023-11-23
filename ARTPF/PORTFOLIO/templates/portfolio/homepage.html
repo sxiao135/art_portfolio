@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira%20Code">
-<link rel="stylesheet" href="C:\Users\sxiao\art_portfolio\art_portfolio\art_portfolio\ARTPF\portfolio\static\artpf.css">
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/libre-barcode-39-text">
+
 <style>
     h1 {
         font-family: 'Fira Code', monospace;
-        font-size: 200%;
+        font-size: 300%;
         text-align: center;
+        font-weight: 20%;
     }
     h2 {
         font-family: 'Fira Code', monospace;
-        font-size: 150%;
+        font-size: 125%;
         text-align: center;
     }
     p {
         font-family: 'Fira Code', monospace;
         font-size: 75%;
         text-align: center;
+        color: black;
+    }
+    a {
+        color: black;
+        text-decoration:none;
+    }
+    div {
+        align-items: center;
     }
 
-    ul {
-        list-style-type: none;
-        text-align: center;
+    .topnav {
+        background-color: black;
+        overflow: hidden;
+        color: white;
+    }
+    .header {
+        font-size: 175%;
     }
 
     iframe {
@@ -35,8 +49,15 @@
     <head>
         <title>Susan Xiao's Art Portfolio</title>
     </head>
+    <h1><a href="homepage">Susan Xiao</a></h1>
+    <h2 class="header">Art Portfolio</h2>
+    <br>
+    <div class="topnav">
+        <!-- <a href="#contact">Contact</a> -->
+        <p class="topnav">UNDER CONSTRUCTION</p>
+      </div>
     <body>
-        <h1>susan xiao</h1>
+        <br>
         {% block body %}
         {% endblock %}
     </body>
