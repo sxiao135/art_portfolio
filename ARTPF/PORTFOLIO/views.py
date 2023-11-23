@@ -5,5 +5,5 @@ from django.http import HttpResponse
 def testing(request):
     return HttpResponse("Hello World!")
 
-def homepage_page(request):
-    return render(request, "portfolio/homepage")
+def homepage(request):
+    return render(request, "portfolio/homepage.html")
