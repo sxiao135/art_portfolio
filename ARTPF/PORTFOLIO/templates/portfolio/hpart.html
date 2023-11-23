@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<!-- home page art-->
+{% extends "portfolio/homepage.html" %}
+
+{% block body %}
+    <h1>Tasks:</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
