@@ -7,5 +7,5 @@ class Works(models.Model):
     img_path = models.CharField(max_length=1000)
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.title}: {self.img_path}"
 
