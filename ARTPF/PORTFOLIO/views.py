@@ -7,6 +7,6 @@ def testing(request):
     return HttpResponse("Hello World!")
 
 def homepage(request):
-    return render(request, "portfolio/hpart.html", {
-        "works": Works.objects.all()
+    return render(request, "portfolio/hpart.html", { #renders the first page with the studies
+        "works": Works.objects.all() #include sql/django table with the titles and img_paths
     })
