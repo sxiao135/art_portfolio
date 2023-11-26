@@ -1,3 +1,5 @@
+* copied fromm ChatGPT (Query: can you help me code my own art portfolio? i know basic java, sql, and python, but i'm not sure where to start.) *
+
 Define Requirements:
 Identify the features you want in your portfolio. This might include an image gallery, project descriptions, a contact form, etc.
 Decide on the overall layout and design.
