@@ -56,7 +56,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates')],
-        'STATICFILES_DIRS' : [os.path.join(BASE_DIR,'portfolio/static')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +66,12 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'portfolio/static'),
+    BASE_DIR / "static",
+    "/var/www/static/",
 ]
 
 WSGI_APPLICATION = 'ARTPF.wsgi.application'

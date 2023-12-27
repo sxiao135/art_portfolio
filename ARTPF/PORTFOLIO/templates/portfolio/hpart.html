@@ -9,7 +9,8 @@
             <div>
                 <h2>{{ work.title }}</h2>
                     <!-- <iframe id ="{{ work.id }}" src="{{ work.img_path }}" frameborder="0" scrolling="yes" allowfullscreen title="{{ work.title }}"></iframe> -->
-                    <center><img src="{{ work.img_path }}" alt="{{ work.title }}"></center>
+                    {% load static %}
+                    <center><img src='{% static work.img_path %}' alt="{{ work.title }}"></center>
                     <p> {{ work.description }} </p>
                 <br>
             </div>
