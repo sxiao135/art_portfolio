@@ -9,3 +9,5 @@ Models SQL
   * [modelname].objects.all()
 * get item using id:
   * a = [modelname].obejcts.get(pk=2)
+* models:
+  * don't forget to makemigrations and migrate
