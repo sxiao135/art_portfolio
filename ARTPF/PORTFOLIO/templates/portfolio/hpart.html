@@ -2,6 +2,7 @@
 <!-- home page art-->
 <!--regular studies page-->
 {% extends "portfolio/homepage.html" %}
+{% load static %}
 
 {% block body %}
     <!-- <ul> -->
@@ -9,7 +10,6 @@
             <div>
                 <h2>{{ work.title }}</h2>
                     <!-- <iframe id ="{{ work.id }}" src="{{ work.img_path }}" frameborder="0" scrolling="yes" allowfullscreen title="{{ work.title }}"></iframe> -->
-                    {% load static %}
                     <center><img src='{% static work.img_path %}' alt="{{ work.title }}"></center>
                     <!-- the image path seems to be printing static before it. it's still not working. the picture image paths need to be fixed -->
                     <p> {{ work.description }} </p>

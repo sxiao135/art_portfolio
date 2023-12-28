@@ -116,12 +116,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/portfolio/pictures/'
+STATIC_URL = 'static/'
 
-#STATIC_ROOT = '' #the absolute path to the directory where app serves static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
-    # os.path.join(BASE_DIR,'portfolio/static/')
+    os.path.join(BASE_DIR,'portfolio/static/')
 ]
 
 # Default primary key field type
