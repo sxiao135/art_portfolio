@@ -18,5 +18,5 @@ class Works(models.Model):
     tags = models.ManyToManyField(Tag)
 
     def __str__(self):
-        return f"{self.title}: {self.img_path}\n tags: {self.tags}"
+        return f"{self.title}: {self.img_path}"
 

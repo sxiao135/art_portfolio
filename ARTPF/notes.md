@@ -11,3 +11,5 @@ Models SQL
   * a = [modelname].obejcts.get(pk=2)
 * models:
   * don't forget to makemigrations and migrate
+* manytomany:
+  * print([a.name for a in tags.all()])
