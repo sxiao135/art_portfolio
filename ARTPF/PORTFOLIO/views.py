@@ -13,7 +13,7 @@ def homepage(request):
     })
 
 def studies(request):
-    objects_with_tag_study = Works.objects.filter(tags=3) #only works with id numbers
+    objects_with_tag_study = Works.objects.filter(tags=2) #only works with id numbers
     return render(request, "portfolio/studies.html", { #renders the first page with the studies
-        "works": objects_with_tag_study #include sql/django table with the titles and img_paths
+        "studies": objects_with_tag_study #include sql/django table with the titles and img_paths
     })
