@@ -19,7 +19,7 @@ def studies(request):
     })
 
 def digital(request):
-    objects_with_tag_digital = Works.objects.filter(tags=4) #only works with id numbers
+    objects_with_tag_digital = Works.objects.filter(tags=7) #i don't know why this is 7
     return render(request, "portfolio/digital.html", { #renders the first page with the studies
         "works": objects_with_tag_digital #include sql/django table with the titles and img_paths
     })
