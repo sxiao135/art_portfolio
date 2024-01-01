@@ -19,9 +19,9 @@ def studies(request):
     })
 
 def digital(request):
-    objects_with_tag_digital = Works.objects.filter(tags=3) #only works with id numbers
+    objects_with_tag_digital = Works.objects.filter(tags=4) #only works with id numbers
     return render(request, "portfolio/digital.html", { #renders the first page with the studies
-        "studies": objects_with_tag_digital #include sql/django table with the titles and img_paths
+        "works": objects_with_tag_digital #include sql/django table with the titles and img_paths
     })
 
 def about(request):
