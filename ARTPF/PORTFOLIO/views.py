@@ -23,6 +23,13 @@ def testing(request):
 #     return render(request, "portfolio/digital.html", { #renders the first page with the studies
 #         "works": objects_with_tag_digital #include sql/django table with the titles and img_paths
 #     })
+
+def about(request):
+    return render(request, "portfolio/about.html")
+
+def error(request):
+    return render(request, "portfolio/error.html")
+
 def portfolio_page(request, tag):
     tag_mapping = {
         'fp': 1,
@@ -31,6 +38,7 @@ def portfolio_page(request, tag):
     }
 
     tag_id = tag_mapping.get(tag, None)
+    tag_id = int(tag_id)
     if tag_id is None:
         # Handle invalid tag, you can raise a 404 or redirect to a default page
         return render(request, "portfolio/error.html")
@@ -43,6 +51,3 @@ def portfolio_page(request, tag):
     }
 
     return render(request, template_name, context)
-
-def about(request):
-    return render(request, "portfolio/about.html")
