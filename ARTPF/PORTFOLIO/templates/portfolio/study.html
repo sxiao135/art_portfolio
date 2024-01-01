@@ -7,13 +7,13 @@
 {% block body %}
     <!-- <ul> -->
         <h2>Digital & Traditional Studies</h2>
-        {% for study in studies %}
+        {% for work in works %}
             <div>
-                <h2>{{ study.title }}</h2>
+                <h2>{{ work.title }}</h2>
                     <!-- <iframe id ="{{ work.id }}" src="{{ work.img_path }}" frameborder="0" scrolling="yes" allowfullscreen title="{{ work.title }}"></iframe> -->
-                    <center><img src='{% static study.img_path %}' alt="{{ study.title }}"></center>
+                    <center><img src='{% static work.img_path %}' alt="{{ work.title }}"></center>
                     <!-- the image path seems to be printing static before it. it's still not working. the picture image paths need to be fixed -->
-                    <p> {{ study.description }} </p>
+                    <p> {{ work.description }} </p>
                 <br>
             </div>
         {% endfor %}

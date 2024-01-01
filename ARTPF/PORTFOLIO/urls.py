@@ -20,8 +20,9 @@ from . import views
 
 urlpatterns = [
     path('', views.testing, name="testing"),
-    path('homepage', views.homepage, name="homepage"),
-    path('studies', views.studies, name="studies"),
     path('about', views.about, name="about"),
-    path('digital', views.digital, name="digital"),
+    path('homepage', views.portfolio_page, {'tag': 'fp'}, name="homepage"),
+    path('studies', views.portfolio_page, {'tag': 'study'}, name="studies"),
+    path('digital', views.portfolio_page, {'tag': 'digital'}, name="digital"),
+    # path('portfolio/<str:tag>/', views.portfolio_page, name='portfolio_page')
 ]
