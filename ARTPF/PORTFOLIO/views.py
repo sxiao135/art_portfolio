@@ -17,3 +17,12 @@ def studies(request):
     return render(request, "portfolio/studies.html", { #renders the first page with the studies
         "studies": objects_with_tag_study #include sql/django table with the titles and img_paths
     })
+
+def digital(request):
+    objects_with_tag_digital = Works.objects.filter(tags=3) #only works with id numbers
+    return render(request, "portfolio/digital.html", { #renders the first page with the studies
+        "studies": objects_with_tag_digital #include sql/django table with the titles and img_paths
+    })
+
+def about(request):
+    return render(request, "portfolio/about.html")

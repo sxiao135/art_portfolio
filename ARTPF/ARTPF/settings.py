@@ -122,7 +122,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directo
 
 STATICFILES_DIRS = [ # other places static files are stored
     os.path.join(BASE_DIR,'portfolio/static/portfolio/pictures/'), #this is where the html pulls static images from
-    os.path.join(BASE_DIR, 'portfolio/static/portfolio/css'), #to css stylesheets
+    os.path.join(BASE_DIR, 'portfolio/static/portfolio/css/'), #to css stylesheets
 ]
 
 # Default primary key field type
