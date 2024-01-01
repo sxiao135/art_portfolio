@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Works
+from .models import Works, Tag
 
 # Create your views here.
 def testing(request):
@@ -43,7 +43,7 @@ def portfolio_page(request, tag):
         # Handle invalid tag, you can raise a 404 or redirect to a default page
         return render(request, "portfolio/error.html")
     
-    objects_with_tag = Works.objects.filter(tags=tag_id)
+    objects_with_tag = Works.objects.filter(tags=tag_id) #.prefetch_related_related(Tag)
     template_name = f"portfolio/{tag}.html"
 
     context = {
