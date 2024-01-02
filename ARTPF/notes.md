@@ -13,3 +13,5 @@ Models SQL
   * don't forget to makemigrations and migrate
 * manytomany:
   * print([a.name for a in tags.all()])
+
+***remember to pull before pushing***
