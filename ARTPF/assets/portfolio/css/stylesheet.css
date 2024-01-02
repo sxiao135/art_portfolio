@@ -16,6 +16,10 @@ h2 {
     font-size: 125%;
     text-align: center;
 }
+h3 {
+    font-size: 100%;
+    text-align: center;
+}
 p {
     font-size: 75%;
     text-align: center;
@@ -48,5 +52,4 @@ div {
 img {
     width: 400px; 
     top: 20px;
-    margin-bottom: 20px;
 }

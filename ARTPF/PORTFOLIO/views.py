@@ -34,8 +34,9 @@ def portfolio_page(request, tag):
     tag_mapping = {
         'fp': 1,
         'study': 2,
-        'digital': 7,
+        'digital': 6,
     }
+    print(tag)
 
     tag_id = tag_mapping.get(tag, None)
     tag_id = int(tag_id)
@@ -43,7 +44,10 @@ def portfolio_page(request, tag):
         # Handle invalid tag, you can raise a 404 or redirect to a default page
         return render(request, "portfolio/error.html")
     
+    # print(tag_id)
     objects_with_tag = Works.objects.filter(tags=tag_id) #.prefetch_related_related(Tag)
+    # print(f"Tag ID: {tag_id}, Works count: {objects_with_tag.count()}")
+    
     template_name = f"portfolio/{tag}.html"
 
     context = {

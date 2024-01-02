@@ -3,33 +3,25 @@
 {% load static %}
 
 {% block body %}
-    <!-- <ul> -->
+    <!-- <main> -->
         {% for work in works %}
-            <div>
-                <h2>{{ work.title }}</h2>
+        <center>
+        <div class="responsive">
+            <div class="gallery">
                     <!-- <iframe id ="{{ work.id }}" src="{{ work.img_path }}" frameborder="0" scrolling="yes" allowfullscreen title="{{ work.title }}"></iframe> -->
-                    <center><img src='{% static work.img_path %}' alt="{{ work.title }}"></center>
+                    <img src='{% static work.img_path %}' alt="{{ work.title }}">
                     <!-- the image path seems to be printing static before it. it's still not working. the picture image paths need to be fixed -->
-                    <p> {{ work.description }} </p>
-                <br>
+                    <!-- <p> {{ work.description }} </p> -->
+                    <div class="overlay">
+                        <div class="text">
+                            <h2>{{ work.title }}</h2>
+                            <p> {{ work.description }} </p>
+                        </div>
+                    </div>
             </div>
-
-            <script> 
-                //IMAGE SWITCH NOT WORKING
-                var iframeID = "{{ work.id }}";
-                var iframe = document.getElementById(iframeID);
-                var oldSrc = iframe.src;
-                var newSrc = 'C:/Users/sxiao/art_portfolio/art_portfolio/art_portfolio/ARTPF/portfolio/templates/portfolio/iamge_desc.html'; //testing link
-            
-                iframe.addEventListener('mouseover', function() {
-                    iframe.src = newSrc;
-                });
-            
-                iframe.addEventListener('mouseout', function() {
-                    iframe.src = oldSrc;
-                });
-            </script>
+        </div>
+        </center>
         {% endfor %}
-
-    <!-- </ul> -->
+        <div class="clearfix"></div>
+        <!-- </main> -->
 {% endblock %}
