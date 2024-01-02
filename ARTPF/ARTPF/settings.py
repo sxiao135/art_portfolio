@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'ARTPF.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+key = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
@@ -91,7 +91,7 @@ DATABASES = {
         'PASSWORD':os.environ.get("DB_PASSWORD"), 
         'PORT':os.environ.get("DB_PORT"), } }
 }
-
+DATABASES = frozenset(key.items())
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
