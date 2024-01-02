@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "portfolio/layout.html" %}
+{% load static %}
+{% block body %}
+<br>
+<h2>{{ image.title }}</h2>
+    <center><img class="full" src='{% static image.img_path %}' alt="{{ image.title }}"></center>
+    <p> {{ image.description }} </p>
+{% endblock %}

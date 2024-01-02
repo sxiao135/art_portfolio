@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
@@ -24,5 +24,7 @@ urlpatterns = [
     path('homepage', views.portfolio_page, {'tag': 'fp'}, name="homepage"),
     path('studies', views.portfolio_page, {'tag': 'study'}, name="studies"),
     path('digital', views.portfolio_page, {'tag': 'digital'}, name="digital"),
-    # path('portfolio/<str:tag>/', views.portfolio_page, name='portfolio_page')
+    path('studies/<int:image_id>/', views.image_detail, name='image_detail'), #these are repetitive, not sure how to fix yet
+    path('digital/<int:image_id>/', views.image_detail, name='image_detail'),
+    path('homepage/<int:image_id>/', views.image_detail, name='image_detail'),
 ]
