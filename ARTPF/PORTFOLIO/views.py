@@ -38,6 +38,6 @@ def portfolio_page(request, tag):
 
     return render(request, template_name, context)
 
-def image_detail(request, image_id):
-    image = Works.objects.get(id=image_id)
-    return render(request, 'portfolio/image_detail.html', {'image':image})
+# def image_detail(request, image_id):
+#     image = Works.objects.get(id=image_id)
+#     return render(request, 'portfolio/image_detail.html', {'image':image})
