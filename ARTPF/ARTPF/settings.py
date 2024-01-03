@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', )
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(os.environ.get('DEBUG')) == '1'
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh'] #
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh'] #
 if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
 
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'PORTFOLIO', 
+    'portfolio', 
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'ARTPF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'PORTFOLIO', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,9 +132,9 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
-    os.path.join(BASE_DIR,'PORTFOLIO/static/portfolio/pictures/'), #this is where the html pulls static images from
-    os.path.join(BASE_DIR, 'PORTFOLIO/static/portfolio/css/'), #to css stylesheets
-    os.path.join(BASE_DIR, 'PORTFOLIO/static/portfolio/js/'),
+    os.path.join(BASE_DIR,'portfolio/static/portfolio/pictures/'), #this is where the html pulls static images from
+    os.path.join(BASE_DIR, 'portfolio/static/portfolio/css/'), #to css stylesheets
+    os.path.join(BASE_DIR, 'portfolio/static/portfolio/js/'),
 ]
 
 STORAGES = {'default':{

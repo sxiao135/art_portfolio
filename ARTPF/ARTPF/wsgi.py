@@ -13,9 +13,10 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 
 # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ARTPF.settings')
 
-# application = get_wsgi_application()app=application
+# application = get_wsgi_application()
 
-import os from django.core.wsgi 
-import get_wsgi_application 
+import os 
+from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'saveplate.settings') 
-application=get_wsgi_application()app=application #add here
+application=get_wsgi_application()
+app=application #add here

@@ -41,3 +41,22 @@ def portfolio_page(request, tag):
 # def image_detail(request, image_id):
 #     image = Works.objects.get(id=image_id)
 #     return render(request, 'portfolio/image_detail.html', {'image':image})
+#
+#####OLD FUNCTIONS
+# def homepage(request):
+#     objects_with_tag_fp = Works.objects.filter(tags=1) #only works with id numbers
+#     return render(request, "portfolio/hpart.html", { #renders the first page with the studies
+#         "works": objects_with_tag_fp #include sql/django table with the titles and img_paths
+#     })
+
+# def studies(request):
+#     objects_with_tag_study = Works.objects.filter(tags=2) #only works with id numbers
+#     return render(request, "portfolio/studies.html", { #renders the first page with the studies
+#         "studies": objects_with_tag_study #include sql/django table with the titles and img_paths
+#     })
+
+# def digital(request):
+#     objects_with_tag_digital = Works.objects.filter(tags=4) #only works with id numbers
+#     return render(request, "portfolio/digital.html", { #renders the first page with the studies
+#         "works": objects_with_tag_digital #include sql/django table with the titles and img_paths
+#     })
