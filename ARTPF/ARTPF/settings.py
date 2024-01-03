@@ -59,7 +59,7 @@ ROOT_URLCONF = 'ARTPF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'PORTFOLIO', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
