@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'portfolio', 
+    'PORTFOLIO', 
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'ARTPF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'PORTFOLIO', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,9 +132,9 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
-    os.path.join(BASE_DIR,'portfolio/static/portfolio/pictures/'), #this is where the html pulls static images from
-    os.path.join(BASE_DIR, 'portfolio/static/portfolio/css/'), #to css stylesheets
-    os.path.join(BASE_DIR, 'portfolio/static/portfolio/js/'),
+    os.path.join(BASE_DIR,'PORTFOLIO/static/portfolio/pictures/'), #this is where the html pulls static images from
+    os.path.join(BASE_DIR, 'PORTFOLIO/static/portfolio/css/'), #to css stylesheets
+    os.path.join(BASE_DIR, 'PORTFOLIO/static/portfolio/js/'),
 ]
 
 STORAGES = {'default':{
