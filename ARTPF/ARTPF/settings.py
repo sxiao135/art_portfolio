@@ -33,7 +33,6 @@ if not DEBUG:
 # Application definition
 
 INSTALLED_APPS = [
-    'PORTFOLIO', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +41,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'portfolio', 
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'ARTPF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'PORTFOLIO', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
