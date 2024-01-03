@@ -13,6 +13,7 @@ jellyfish==0.11.2
 lib50==3.0.6
 markdown2==2.4.10
 numpy==1.26.2
+openssl-engine==1.1.1
 pandas==2.1.4
 pexpect==4.8.0
 psycopg2-binary==2.9.9
