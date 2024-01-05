@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #DEBUG = str(os.environ.get('DEBUG')) == '1'
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh'] #
@@ -130,12 +130,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
+# STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
     os.path.join(BASE_DIR,'static/portfolio/pictures/'), #this is where the html pulls static images from
     os.path.join(BASE_DIR, 'static/portfolio/css/'), #to css stylesheets
 ]
+
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 # STORAGES = {'default':{
 #     "BACKEND":'cloudinary_storage.storage.MediaCloudinaryStorage' }, 
@@ -143,10 +145,11 @@ STATICFILES_DIRS = [ # other places static files are stored
 #         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage", 
 #         }, }
 
-# CLOUDINARY_STORAGE = { 
-#     'CLOUD_NAME': os.environ.get('CLOUD_NAME'), 
-#     'API_KEY': os.environ.get('API_KEY'), 
-#     'API_SECRET': os.environ.get('API_SECRET'), }
+CLOUDINARY_STORAGE = { 
+    'CLOUD_NAME': os.environ.get('CLOUD_NAME'), 
+    'API_KEY': os.environ.get('API_KEY'), 
+    'API_SECRET': os.environ.get('API_SECRET'), 
+    }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
