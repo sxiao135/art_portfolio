@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #DEBUG = str(os.environ.get('DEBUG')) == '1'
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh'] #
-if not DEBUG:
-    ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
+# if not DEBUG:
+#     ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
 
 
 # Application definition
@@ -80,18 +80,18 @@ WSGI_APPLICATION = 'ARTPF.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    'default': { 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'HOST': os.environ.get("DB_HOST"), 
-        'NAME': os.environ.get("DB_NAME"), 
-        'USER': os.environ.get("DB_USER"), 
-        'PASSWORD':os.environ.get("DB_PASSWORD"), 
-        'PORT':os.environ.get("DB_PORT"), 
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': { 
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+    #     'HOST': os.environ.get("DB_HOST"), 
+    #     'NAME': os.environ.get("DB_NAME"), 
+    #     'USER': os.environ.get("DB_USER"), 
+    #     'PASSWORD':os.environ.get("DB_PASSWORD"), 
+    #     'PORT':os.environ.get("DB_PORT"), 
+    # }
 }
 
 # Password validation
@@ -133,21 +133,20 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
-    os.path.join(BASE_DIR,'portfolio/static/portfolio/pictures/'), #this is where the html pulls static images from
-    os.path.join(BASE_DIR, 'portfolio/static/portfolio/css/'), #to css stylesheets
-    os.path.join(BASE_DIR, 'portfolio/static/portfolio/js/'),
+    os.path.join(BASE_DIR,'static/portfolio/pictures/'), #this is where the html pulls static images from
+    os.path.join(BASE_DIR, 'static/portfolio/css/'), #to css stylesheets
 ]
 
-STORAGES = {'default':{
-    "BACKEND":'cloudinary_storage.storage.MediaCloudinaryStorage' }, 
-    "staticfiles": { 
-        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage", 
-        }, }
+# STORAGES = {'default':{
+#     "BACKEND":'cloudinary_storage.storage.MediaCloudinaryStorage' }, 
+#     "staticfiles": { 
+#         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage", 
+#         }, }
 
-CLOUDINARY_STORAGE = { 
-    'CLOUD_NAME': os.environ.get('CLOUD_NAME'), 
-    'API_KEY': os.environ.get('API_KEY'), 
-    'API_SECRET': os.environ.get('API_SECRET'), }
+# CLOUDINARY_STORAGE = { 
+#     'CLOUD_NAME': os.environ.get('CLOUD_NAME'), 
+#     'API_KEY': os.environ.get('API_KEY'), 
+#     'API_SECRET': os.environ.get('API_SECRET'), }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -9,9 +9,7 @@
         <center>
         <div class="responsive">
             <div class="gallery" onmouseover="showText()" onmouseout="showImage()">
-                <a href="{% url 'image_detail' work.id %}">
                     <img id="image" src='{% static work.img_path %}' alt="{{ work.title }}">
-                </a>
                 <div id="text" class="overlay">
                     <h2>{{ work.title }}</h2>
                     <p> {{ work.description }} </p>

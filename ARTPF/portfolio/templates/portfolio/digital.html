@@ -10,9 +10,7 @@
     <br>
     {% for work in works %}
         <div class="linear">
-            <a href="{% url 'image_detail' work.id %}">
                 <center><img src='{% static work.img_path %}' alt="{{ work.title }}"></center>
-            </a>
             <h2>{{ work.title }}</h2>
             <p> {{ work.description }} </p>
             <br>

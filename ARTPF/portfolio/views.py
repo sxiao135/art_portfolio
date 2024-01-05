@@ -52,7 +52,7 @@ def homepage(request):
 def studies(request):
     objects_with_tag_study = Works.objects.filter(tags=2) #only works with id numbers
     return render(request, "portfolio/study.html", { #renders the first page with the studies
-        "studies": objects_with_tag_study #include sql/django table with the titles and img_paths
+        "works": objects_with_tag_study #include sql/django table with the titles and img_paths
     })
 
 def digital(request):
