@@ -45,7 +45,7 @@ def error(request):
 #####OLD FUNCTIONS
 def homepage(request):
     objects_with_tag_fp = Works.objects.filter(tags=1) #only works with id numbers
-    return render(request, "portfolio/fp.html", { #renders the first page with the studies
+    return render(request, "portfolio/index.html", { #renders the first page with the studies
         "works": objects_with_tag_fp #include sql/django table with the titles and img_paths
     })
 
