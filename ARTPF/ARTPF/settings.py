@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/' #edit
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
+# STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
     os.path.join(BASE_DIR,'static/portfolio/pictures/'), #this is where the html pulls static images from
@@ -138,12 +138,6 @@ STATICFILES_DIRS = [ # other places static files are stored
 ]
 
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-
-# STORAGES = {'default':{
-#     "BACKEND":'cloudinary_storage.storage.MediaCloudinaryStorage' }, 
-#     "staticfiles": { 
-#         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage", 
-#         }, }
 
 CLOUDINARY_STORAGE = { 
     'CLOUD_NAME': os.environ.get('CLOUD_NAME'), 
