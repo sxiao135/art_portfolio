@@ -1,5 +1,10 @@
 { 
-  "version": 2, 
+  "version": 2,
+  "functions": {
+    "api/**/*.py": {
+      "excludeFiles": "public/**"
+    }
+  },
   "builds": [ { 
     "src": "ARTPF/wsgi.py", 
     "use": "@vercel/python", 
@@ -13,14 +18,7 @@
       "config": 
       { 
         "distDir": "assets" 
-      } },
-      {
-        "functions": {
-          "api/**/*.py": {
-            "excludeFiles": "public/**"
-          }
-        }
-      } ], 
+      } } ], 
   "routes": [ { 
     "src": "/static/(.*)", 
     "dest": "/static/$1" 
