@@ -3,7 +3,7 @@
 import os
 import sys
 import dotenv
-#test
+
 def main():
     """Run administrative tasks."""
     dotenv.read_dotenv()
