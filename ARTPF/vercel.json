@@ -13,7 +13,14 @@
       "config": 
       { 
         "distDir": "assets" 
-      } } ], 
+      } },
+      {
+        "functions": {
+          "api/**/*.py": {
+            "excludeFiles": "public/**"
+          }
+        }
+      } ], 
   "routes": [ { 
     "src": "/static/(.*)", 
     "dest": "/static/$1" 

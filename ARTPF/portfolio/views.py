@@ -1,10 +1,10 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from django.shortcuts import render
+# from django.http import HttpResponse
 from .models import Works, Tag
 
 # Create your views here.
-def testing(request):
-    return HttpResponse("Hello World!")
+# def testing(request):
+#     return HttpResponse("Hello World!")
 
 def about(request):
     return render(request, "portfolio/about.html")
