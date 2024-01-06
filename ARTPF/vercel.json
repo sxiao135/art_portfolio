@@ -1,5 +1,6 @@
 { 
   "version": 2,
+
   "builds": [ { 
     "src": "ARTPF/wsgi.py", 
     "use": "@vercel/python", 
@@ -8,12 +9,17 @@
       "runtime": "python3.9" 
     } }, 
     { 
-    "src": "build_files.sh", 
-      "use": "@vercel/static-build", 
-      "config": 
-      { 
-        "distDir": "assets" 
-      } } ], 
+      "src": "build_files.sh", 
+        "use": "@vercel/static-build", 
+        "config": 
+        { 
+          "distDir": "assets" 
+        } } ,
+    {
+      "src": "ARTPF/**/*.py",
+      "excludeFiles": "public/**"
+    }],
+
   "routes": [ { 
     "src": "/static/(.*)", 
     "dest": "/static/$1" 
@@ -21,11 +27,7 @@
   { 
     "src": "/(.*)", 
     "dest": "ARTPF/wsgi.py"
-  },
-  {
-    "ARTPF/**/*.py": {
-      "excludeFiles": "public/**"
-    }
   }], 
+  
   "outputDirectory": "assets"
 }
