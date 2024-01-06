@@ -5,7 +5,7 @@
     "src": "ARTPF/wsgi.py", 
     "use": "@vercel/python", 
     "config": { 
-      "maxLambdaSize": "3mb", 
+      "maxLambdaSize": "7mb", 
       "runtime": "python3.9" 
     } }, 
     { 
