@@ -21,11 +21,11 @@
     { 
       "src": "/(.*)", 
       "dest": "ARTPF/wsgi.py"
-    } ], 
-  "outputDirectory": "assets",
-  "functions": [ {
+    },
+  {"functions": {
     "ARTPF/**/*.py": {
       "excludeFiles": "public/**"
     }
-  } ]
+  }}], 
+  "outputDirectory": "assets"
 }
