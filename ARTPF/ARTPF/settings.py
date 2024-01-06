@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh'] #
 # Application definition
 
 INSTALLED_APPS = [
+    'portfolio',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,8 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
-    'portfolio', 
+    'cloudinary', 
 ]
 
 MIDDLEWARE = [
