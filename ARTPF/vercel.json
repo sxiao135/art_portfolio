@@ -2,8 +2,8 @@
   "version": 2,
 
   "functions": {
-    "portfolio/**/*": {
-      "excludeFiles": "public/**"
+    "ARTPF/portfolio/**/*": {
+      "excludeFiles": "templates/**"
     }
   },
 
