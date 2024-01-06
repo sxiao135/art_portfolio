@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 #DEBUG = str(os.environ.get('DEBUG')) == '1'
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh'] #
+ALLOWED_HOSTS = ['*'] #
 # if not DEBUG:
 #     ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
 
