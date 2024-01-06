@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path, os
-import environ 
-env = environ.Env.read_env()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -87,11 +86,11 @@ DATABASES = {
     # }
     'default': { 
         'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'HOST': env("DB_HOST"), 
-        'NAME': env("DB_NAME"), 
-        'USER': env("DB_USER"), 
-        'PASSWORD':env("DB_PASSWORD"), 
-        'PORT':env("DB_PORT"), 
+        'HOST': os.environ.get("DB_HOST"), 
+        'NAME': os.environ.get("DB_NAME"), 
+        'USER': os.environ.get("DB_USER"), 
+        'PASSWORD':os.environ.get("DB_PASSWORD"), 
+        'PORT':os.environ.get("DB_PORT"), 
     }
 }
 
@@ -141,9 +140,9 @@ STATICFILES_DIRS = [ # other places static files are stored
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 CLOUDINARY_STORAGE = { 
-    'CLOUD_NAME': env('CLOUD_NAME'), 
-    'API_KEY': env('API_KEY'), 
-    'API_SECRET': env('API_SECRET'), 
+    'CLOUD_NAME': os.environ.get('CLOUD_NAME'), 
+    'API_KEY': os.environ.get('API_KEY'), 
+    'API_SECRET': os.environ.get('API_SECRET'), 
     }
 
 # Default primary key field type
