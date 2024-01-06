@@ -1,12 +1,6 @@
 { 
   "version": 2,
-
-  "functions": {
-    "ARTPF/portfolio/**/*": {
-      "excludeFiles": "templates/**"
-    }
-  },
-
+  
   "routes": [ { 
     "src": "/static/(.*)", 
     "dest": "/static/$1" 
