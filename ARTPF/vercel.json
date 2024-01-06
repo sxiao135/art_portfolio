@@ -19,6 +19,4 @@
   "routes": [ { 
     "src": "/static/(.*)", 
     "dest": "ARTPF/wsgi.py"  
-  } ], 
-
-  "outputDirectory": "assets" }
+  } ] }
