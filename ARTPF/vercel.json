@@ -18,14 +18,14 @@
     "src": "/static/(.*)", 
     "dest": "/static/$1" 
   }, 
-    { 
-      "src": "/(.*)", 
-      "dest": "ARTPF/wsgi.py"
-    },
-  {"functions": {
+  { 
+    "src": "/(.*)", 
+    "dest": "ARTPF/wsgi.py"
+  },
+  {
     "ARTPF/**/*.py": {
       "excludeFiles": "public/**"
     }
-  }}], 
+  }], 
   "outputDirectory": "assets"
 }
