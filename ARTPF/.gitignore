@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/django,visualstudio,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,visualstudio,python
 notes.md
+vercel-build.json
 ### Django ###
 *.log
 *.pot
