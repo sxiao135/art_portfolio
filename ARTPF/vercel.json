@@ -2,8 +2,8 @@
   "version": 2,
 
   "functions": {
-    "ARTPF/**/*.py": {
-      "excludeFiles": "public/**"
+    "api/**/*.py": {
+      "excludeFiles": "static/**"
     }
   },
 
