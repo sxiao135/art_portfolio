@@ -5,7 +5,7 @@
     "src": "ARTPF/wsgi.py", 
     "use": "@vercel/python", 
     "config": { 
-      "maxLambdaSize": "15mb", 
+      "maxLambdaSize": "7mb", 
       "runtime": "python3.9" 
     } }, 
     { 
@@ -20,5 +20,5 @@
     "src": "/static/(.*)", 
     "dest": "/static/$1" 
   } ], 
-  
+
   "outputDirectory": "assets" }
