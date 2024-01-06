@@ -5,6 +5,7 @@
 # echo "static/" >> .gitignore
 
 *.md
+!testing.md
 vercel-build.json
 
 ### Django ###
