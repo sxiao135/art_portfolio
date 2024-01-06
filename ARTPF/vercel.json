@@ -1,23 +1,11 @@
 { 
   "version": 2,
 
-  "builds": [ { 
-    "src": "ARTPF/wsgi.py", 
-    "use": "@vercel/python", 
-    "config": { 
-      "maxLambdaSize": "15mb", 
-      "runtime": "python3.9" 
-    } 
-  }, 
-    { 
-    "src": "build_files.sh", 
-      "use": "@vercel/static-build", 
-      "config": 
-      { 
-        "distDir": "assets" 
-      } 
-    } 
-  ],
+  "functions": {
+    "api/**/*.py": {
+      "excludeFiles": "public/**"
+    }
+  },
 
   "routes": [ { 
     "src": "/static/(.*)", 
@@ -26,10 +14,6 @@
   { 
     "src": "/(.*)", 
     "dest": "ARTPF/wsgi.py"
-  },
-  {
-    "src": "ARTPF/**/*.py",
-    "excludeFiles": "public/**"
   }], 
 
   "outputDirectory": "assets"
