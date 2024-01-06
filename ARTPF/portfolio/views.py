@@ -1,10 +1,19 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from .models import Works, Tag
+import datetime
 
-# Create your views here.
-# def testing(request):
-#     return HttpResponse("Hello World!")
+def index(request):
+    now = datetime.now()
+    html = f'''
+    <html>
+        <body>
+            <h1>Hello from Vercel!</h1>
+            <p>The current time is { now }.</p>
+        </body>
+    </html>
+    '''
+    return HttpResponse(html)
 
 def about(request):
     return render(request, "portfolio/about.html")
@@ -43,7 +52,7 @@ def error(request):
 #     return render(request, 'portfolio/image_detail.html', {'image':image})
 #
 #####OLD FUNCTIONS
-def index(request):
+def homepage(request):
     objects_with_tag_fp = Works.objects.filter(tags=1) #only works with id numbers
     return render(request, "portfolio/index.html", { #renders the first page with the studies
         "works": objects_with_tag_fp #include sql/django table with the titles and img_paths

@@ -19,9 +19,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # path('', views.testing, name="testing"),
+    path('', views.index, name="testing"),
     path('about', views.about, name="about"),
-    path('homepage', views.index, name="homepage"),
+    path('homepage', views.homepage, name="homepage"),
     path('studies', views.studies, name="studies"),
     path('digital', views.digital, name="digital"),
     # path('homepage', views.portfolio_page, {'tag': 'fp'}, name="homepage"), #for the portfolio_pge function
