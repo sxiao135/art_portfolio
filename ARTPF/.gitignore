@@ -6,7 +6,7 @@
 
 *.md
 vercel-build.json
-./static/
+
 ### Django ###
 *.log
 *.pot
