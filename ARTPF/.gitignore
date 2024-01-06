@@ -1,10 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/django,visualstudio,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,visualstudio,python
 echo "*.md" >> .gitignore
-echo "*vercel-build.json" >> .gitignore
-echo "static/portfolio/" >> .gitignore
+echo "vercel-build.json" >> .gitignore
+echo "static/" >> .gitignore
 
-
+*.md
+vercel-build.json
+static/
 ### Django ###
 *.log
 *.pot
