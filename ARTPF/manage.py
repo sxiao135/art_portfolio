@@ -2,12 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import dotenv
+# import dotenv
+import environ 
+env = environ.Env()
 
 def main():
     """Run administrative tasks."""
-    dotenv.load_dotenv()
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ARTPF.settings')
+    # dotenv.load_dotenv()
+    env.setdefault('DJANGO_SETTINGS_MODULE', 'ARTPF.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
