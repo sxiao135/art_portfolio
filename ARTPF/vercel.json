@@ -1,8 +1,8 @@
 { 
   "version": 2,
   "functions": {
-    "ARTPF/portfolio/models.py": {
-      "excludeFiles": "public/"
+    "ARTPF/**/*.py": {
+      "excludeFiles": "public/**"
     }
   },
   "builds": [ { 
