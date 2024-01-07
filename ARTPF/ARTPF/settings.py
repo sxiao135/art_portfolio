@@ -58,7 +58,7 @@ ROOT_URLCONF = 'ARTPF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates', 'portfolio')],
+        'DIRS': [os.path.join(BASE_DIR, 'portfolio/templates/portfolio/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/' #edit
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets', 'static') #the absolute path to the directory where app serves static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
     os.path.join(BASE_DIR,'static/portfolio/pictures/'), #this is where the html pulls static images from
