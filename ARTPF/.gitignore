@@ -7,7 +7,6 @@
 *.md
 !testing.md
 vercel-build.json
-build_files.sh
 
 ### Django ###
 *.log
