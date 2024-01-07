@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path, os
+# from dotenv import read_dotenv
+import os
+
+# read_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 #DEBUG = str(os.environ.get('DEBUG')) == '1'
 
-ALLOWED_HOSTS = ['.vercel.app'] #
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1'] #
+
 
 
 # Application definition
@@ -78,18 +84,14 @@ WSGI_APPLICATION = 'ARTPF.wsgi.app'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    # 'default': { 
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-    #     'HOST': os.environ.get('DB_HOST'), 
-    #     'NAME': os.environ.get('DB_NAME'), 
-    #     'USER': os.environ.get('DB_USER'), 
-    #     'PASSWORD':os.environ.get('DB_PASSWORD'), 
-    #     'PORT':os.environ.get('DB_PORT'), 
-    # }
+    'default': { 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'HOST': os.environ.get('DB_HOST'), 
+        'NAME': os.environ.get('DB_NAME'), 
+        'USER': os.environ.get('DB_USER'), 
+        'PASSWORD':os.environ.get('DB_PASSWORD'), 
+        'PORT':os.environ.get('DB_PORT'), 
+    }
 }
 
 # Password validation
@@ -128,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/' #edit
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets', 'static') #the absolute path to the directory where app serves static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
     os.path.join(BASE_DIR,'static/portfolio/pictures/'), #this is where the html pulls static images from
