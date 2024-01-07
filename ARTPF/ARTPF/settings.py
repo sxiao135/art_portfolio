@@ -26,9 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 #DEBUG = str(os.environ.get('DEBUG')) == '1'
 
-ALLOWED_HOSTS = ['*'] #
-# if not DEBUG:
-#     ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
+ALLOWED_HOSTS = ['.vercel.app'] #
 
 
 # Application definition
@@ -84,14 +82,14 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    'default': { 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'HOST': os.environ.get("DB_HOST"), 
-        'NAME': os.environ.get("DB_NAME"), 
-        'USER': os.environ.get("DB_USER"), 
-        'PASSWORD':os.environ.get("DB_PASSWORD"), 
-        'PORT':os.environ.get("DB_PORT"), 
-    }
+    # 'default': { 
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+    #     'HOST': os.environ.get('DB_HOST'), 
+    #     'NAME': os.environ.get('DB_NAME'), 
+    #     'USER': os.environ.get('DB_USER'), 
+    #     'PASSWORD':os.environ.get('DB_PASSWORD'), 
+    #     'PORT':os.environ.get('DB_PORT'), 
+    # }
 }
 
 # Password validation
