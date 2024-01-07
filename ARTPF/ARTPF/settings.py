@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 #DEBUG = str(os.environ.get('DEBUG')) == '1'
 
-ALLOWED_HOSTS = ['.vercel.app'] #
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh'] #
 
 
 # Application definition
