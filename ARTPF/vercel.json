@@ -12,12 +12,12 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "portfolio/templates/"
+        "distDir": "portfolio/templates/portfolio"
       }}], 
 
   "routes": [ { 
     "src": "/(.*)", 
     "dest": "ARTPF/wsgi.py"
   } ] ,
-  "outputDirectory": "assets"
+  "distDir": "portfolio/templates/portfolio"
 }

@@ -58,7 +58,7 @@ ROOT_URLCONF = 'ARTPF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates', 'portfolio')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,14 +82,14 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    # 'default': { 
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-    #     'HOST': os.environ.get('DB_HOST'), 
-    #     'NAME': os.environ.get('DB_NAME'), 
-    #     'USER': os.environ.get('DB_USER'), 
-    #     'PASSWORD':os.environ.get('DB_PASSWORD'), 
-    #     'PORT':os.environ.get('DB_PORT'), 
-    # }
+    'default': { 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'HOST': os.environ.get('DB_HOST'), 
+        'NAME': os.environ.get('DB_NAME'), 
+        'USER': os.environ.get('DB_USER'), 
+        'PASSWORD':os.environ.get('DB_PASSWORD'), 
+        'PORT':os.environ.get('DB_PORT'), 
+    }
 }
 
 # Password validation
