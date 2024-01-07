@@ -3,7 +3,7 @@
 
   "builds": [ { 
     "src": "ARTPF/wsgi.py", 
-    "use": "@natanffs/vercel-python-wsgi", 
+    "use": "@vercel/python3", 
     "config": { 
       "maxLambdaSize": "15mb", 
       "runtime": "python3.9" 
