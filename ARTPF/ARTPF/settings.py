@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path, os
+# from dotenv import read_dotenv
+import os
+
+# read_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 #DEBUG = str(os.environ.get('DEBUG')) == '1'
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh'] #
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1'] #
 
 
 # Application definition
@@ -58,7 +63,7 @@ ROOT_URLCONF = 'ARTPF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'portfolio/templates/portfolio/')],
+        'DIRS': [os.path.join(BASE_DIR, 'portfolio', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,7 +133,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/' #edit
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') #the absolute path to the directory where app serves static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #the absolute path to the directory where app serves static files
 
 STATICFILES_DIRS = [ # other places static files are stored
     os.path.join(BASE_DIR,'static/portfolio/pictures/'), #this is where the html pulls static images from
