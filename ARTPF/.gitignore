@@ -9,7 +9,7 @@
 vercel-build.json
 # vercel.json
 # requirements.txt
-# build_files.sh
+build_files.sh
 
 ### Django ###
 *.log
