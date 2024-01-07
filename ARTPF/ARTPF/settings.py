@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 #DEBUG = str(os.environ.get('DEBUG')) == '1'
 
-ALLOWED_HOSTS = ['*'] #
+ALLOWED_HOSTS = ['.vercel.app'] #
 # if not DEBUG:
 #     ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
 
@@ -86,11 +86,11 @@ DATABASES = {
     # }
     'default': { 
         'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'HOST': os.environ.get("DB_HOST"), 
-        'NAME': os.environ.get("DB_NAME"), 
-        'USER': os.environ.get("DB_USER"), 
-        'PASSWORD':os.environ.get("DB_PASSWORD"), 
-        'PORT':os.environ.get("DB_PORT"), 
+        'HOST': os.environ.get('DB_HOST'), 
+        'NAME': os.environ.get('DB_NAME'), 
+        'USER': os.environ.get('DB_USER'), 
+        'PASSWORD':os.environ.get('DB_PASSWORD'), 
+        'PORT':os.environ.get('DB_PORT'), 
     }
 }
 
