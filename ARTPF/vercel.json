@@ -3,13 +3,13 @@
   "cleanUrls": true,
   "builds": [ { 
     "src": "ARTPF/wsgi.py", 
-    "use": "@vercel/python", 
+    "use": "@vercel/vercel-python-wsgi", 
     "config": { 
       "maxLambdaSize": "15mb", 
       "runtime": "python3.9" 
     } } ], 
 
   "routes": [ { 
-    "src": "/static/(.*)", 
+    "src": "/(.*)", 
     "dest": "ARTPF/wsgi.py"  
   } ]}
