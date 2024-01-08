@@ -24,10 +24,10 @@ urlpatterns = [
     path('homepage', views.homepage, name="homepage"),
     path('studies', views.studies, name="studies"),
     path('digital', views.digital, name="digital"),
+    path('homepage/<int:image_id>/', views.image_detail, name='image_detail'),
     # path('homepage', views.portfolio_page, {'tag': 'fp'}, name="homepage"), #for the portfolio_pge function
     # path('studies', views.portfolio_page, {'tag': 'study'}, name="studies"),
     # path('digital', views.portfolio_page, {'tag': 'digital'}, name="digital"),
     # path('studies/<int:image_id>/', views.image_detail, name='image_detail'), #these are repetitive, not sure how to fix yet
     # path('digital/<int:image_id>/', views.image_detail, name='image_detail'),
-    # path('homepage/<int:image_id>/', views.image_detail, name='image_detail'),
 ]
