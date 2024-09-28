@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- home page art-->
+<!--regular studies page-->
+{% extends "portfolio/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h2>Graphics</h2>
+    <p>As a graphic designer with the student run, editorially independent newspaper <i>The Crimson White</i>, I work with editors and writers to create graphics complimentary to their articles.  </p>
+    <hr>
+    <br>
+    {% for work in works %}
+        <div class="linear">
+            <a href="{% url 'image_detail' work.id %}" target="_blank">
+                <center><img src='{% static '/portfolio/pictures/' %}{{ work.img_path }}' alt="{{ work.title }}"></center>
+            </a>
+            <h2>
+                <a href="{{ work.url }}" target="_blank">
+                    {{ work.title }}
+                </a>
+            </h2>
+            <p> {{ work.description }} </p>
+            <hr>
+            <br>
+            <br>
+        </div>
+        {% empty %}
+            <p>photos not loading.</p>
+    {% endfor %}
+
+{% endblock %}
